@@ -1,0 +1,54 @@
+<div class="p-5 space-y-10" style="background-color: #FF5200; color: white; position: relative;">
+    <div class="flex flex-wrap items-center font-bold justify-between w-3/4 mx-auto">
+        <img src="../../assets/images/Swiggy_logo.png" alt="" style="height: 50px;">
+        <ul class="flex flex-wrap space-x-6 items-center" style="list-style-type: none;">
+            <li>
+                <a routerLink="/restaurants">Swiggy Corporate</a>
+            </li>
+            <li> <a routerLink="/restaurants">Partner With Us</a> </li>
+            <li>
+                <button class="border inline rounded-lg p-3 hover:bg-white hover:text-orange-400">Get the App</button>
+            </li>
+            <li><button class="flex items-center space-x-2 rounded-lg p-3 hover:bg-white hover:text-orange-400"
+                    (click)="goToCart()"><span><img src="../../assets/images/cart.png" alt=""
+                            style="height: 20px; width: 20px;">
+                    </span>
+                    <p>Cart</p>
+                </button></li>
+        </ul>
+    </div>
+
+
+    <div class="w-1/2 mx-auto flex-col space-y-5">
+        <h1 class="text-wrap text-4xl font-bold text-center">Order food & groceries. Discover best restaurants. Swiggy
+            it!</h1>
+        <div class="text-black flex flex-wrap justify-between space-x-5 gap-4">
+            <span class="flex bg-white rounded-md items-center grow p-2">
+                <img src="../../assets/images/location.png" alt="" style="width: 30px; height: 30px;">
+                <select [(ngModel)]="location" (change)="changeLocation($event)" class="inline rounded-md w-full">
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Chennai">Chennai</option>
+                </select>
+            </span>
+            <span class="flex bg-white p-3 items-center rounded-md grow">
+                <input type="text" class="grow" placeholder="Search for restaurant, item or more">
+                <img src="../../assets/images/search.png" alt="" style="width: 20px; height: 20px;">
+            </span>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-3/4 mx-auto">
+        <a routerLink="/restaurants"><img src="../../assets/images/food_delivery.png" alt="" class=""
+                style="height: 300px; width: 300px;"></a>
+        <a routerLink="/restaurants"><img src="../../assets/images/instamart.png" alt="" class=""
+                style="height: 300px; width: 300px;"></a>
+        <a routerLink="/restaurants"><img src="../../assets/images/dineout.png" alt="" class=""
+                style="height: 300px; width: 300px;"></a>
+        <a routerLink="/restaurants"><img src="../../assets/images/genie.png" alt="" class=""
+                style="height: 300px; width: 300px;"></a>
+    </div>
+
+    <img src="../../assets/images/left.png" alt="" style="width: 200px; position: absolute; top:0; left: 0;">
+    <img src="../../assets/images/right.png" alt="" style="width: 200px; position: absolute; top:0; right: 0;">
+</div>

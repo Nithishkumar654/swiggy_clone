@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+
+<div class="w-full md:w-3/4 mx-auto p-5">
+    <h1 class="font-bold text-3xl">Restaurants to explore</h1>
+    <div class="flex flex-wrap justify-between gap-5 p-5">
+        <div *ngFor="let restaurant of restaurants" class="border flex flex-wrap rounded-md shadow-md">
+            <div class="flex flex-col" style="cursor: pointer;" (click)="navigateTo(restaurant.restaurantName)">
+                <img [src]="'../../assets/images/' + randomImage() + '/wallpaper.png'" alt=""
+                    style="height: 250px; width: 250px;">
+                <div class="p-4">
+                    <p class="font-bold">{{ restaurant.restaurantName }}</p>
+                    <p>{{ restaurant.location }}</p>
+                    <div class="flex justify-start gap-4 flex-wrap">
+                        <p>{{"Time: " + restaurant.timeToDeliver}}</p>
+                        <p>{{"Rating: " + restaurant.rating}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
